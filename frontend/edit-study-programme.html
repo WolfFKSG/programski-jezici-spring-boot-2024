@@ -47,29 +47,30 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                     <a href="./index.html">Pocetna</a>
-                </li>
-                <li class="breadcrumb-item">
+                </li><li class="breadcrumb-item">
                     <a href="./study-programme.html">Smerovi</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                    Dodaj Studenta
-                </li>
+                <li class="breadcrumb-item active" aria-current="page" id="breadcrumb"></li>
             </ol>
         </nav>
 
-        <h1 class="h3">Dodaj Studenta</h1>
+        <h1 class="h3">Izmeni Studijski Smer</h1>
         <div>
             <div class="mb-3">
-                <label for="name" class="form-label">Ime</label>
+                <label for="id" class="form-label">Studijski Smer ID</label>
+                <input type="number" class="form-control" id="id" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Naziv</label>
                 <input type="text" class="form-control" id="name">
             </div>
             <div class="mb-3">
-                <label for="surname" class="form-label">Prezime</label>
-                <input type="text" class="form-control" id="surname">
+                <label for="created" class="form-label">Datum unosa</label>
+                <input type="text" class="form-control" id="created" disabled>
             </div>
             <div class="mb-3">
-                <label for="indeks" class="form-label">Indeks</label>
-                <input type="text" class="form-control" id="indeks">
+                <label for="updated" class="form-label">Datum izmene</label>
+                <input type="text" class="form-control" id="updated" disabled>
             </div>
             <button type="submit" class="btn btn-success" id="save">
                 <i class="fa-solid fa-floppy-disk"></i> Sacuvaj</button>
@@ -80,7 +81,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="./js/search.js"></script>
-    <script src="./js/add.js"></script>
+    <script src="./js/edit-study-programme.js"></script>
 
 </body>
 
