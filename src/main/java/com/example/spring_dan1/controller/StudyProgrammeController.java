@@ -1,8 +1,7 @@
 package com.example.spring_dan1.controller;
 
-import com.example.spring_dan1.entity.Student;
 import com.example.spring_dan1.entity.StudyProgramme;
-import com.example.spring_dan1.model.StudyProgrammeModel;
+import com.example.spring_dan1.model.NameModel;
 import com.example.spring_dan1.service.StudyProgrammeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -30,12 +29,12 @@ public class StudyProgrammeController {
     }
 
     @PostMapping
-    public StudyProgramme create(@RequestBody StudyProgrammeModel model) {
+    public StudyProgramme create(@RequestBody NameModel model) {
         return service.saveStudyProgramme(model);
     }
 
     @PutMapping(path = "/{id}")
-    public StudyProgramme update(@PathVariable Integer id, @RequestBody StudyProgrammeModel model) {
+    public StudyProgramme update(@PathVariable Integer id, @RequestBody NameModel model) {
         return service.updateStudyProgramme(id, model);
     }
 

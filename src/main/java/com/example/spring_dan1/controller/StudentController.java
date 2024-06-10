@@ -2,6 +2,7 @@ package com.example.spring_dan1.controller;
 
 import com.example.spring_dan1.entity.Student;
 import com.example.spring_dan1.model.StudentModel;
+import com.example.spring_dan1.model.ToggleCourse;
 import com.example.spring_dan1.service.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -43,6 +44,12 @@ public class StudentController {                                //sluzi za mapir
     @PutMapping(path = "/{id}")                                                     //updatujemo, stavljamo u link /id korisnika
     public Student updateStudent(@PathVariable Integer id,@RequestBody StudentModel student){
         return service.updateStudent(id,student);
+    }
+
+    //many to many stuff, dont add; add from deletemapping
+    @PutMapping(path = "/course/{id}")
+    public void toggleCourse(@PathVariable Integer id, @RequestBody ToggleCourse model) {
+        service.toggleCourseForStudentId(id, model);
     }
 
     @DeleteMapping(path = "/{id}")

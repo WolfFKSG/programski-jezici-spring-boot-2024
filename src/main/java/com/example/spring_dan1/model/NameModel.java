@@ -7,10 +7,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class StudentModel {
+public class NameModel {
+
     private String name;
-    private String surname;
-    private String indeks;
-    private Integer studyProgrammeId;
 
 }
